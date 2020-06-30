@@ -54,8 +54,7 @@ class InteractiveRecord
   end 
   
   def self.find_by(param)
-    sql ="SELECT * FROM #{self.table_name} WHERE #{param.keys[
-      .to_s} = '#{param.values[0]}'"
+    sql ="SELECT * FROM #{self.table_name} WHERE #{param.keys[0].to_s} = '#{param.values[0]}'"
     DB[:conn].execute(sql)
  end
     
